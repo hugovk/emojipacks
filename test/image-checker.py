@@ -31,8 +31,8 @@ def check_yaml(yaml_filename):
     errors = []
     warnings = []
 
-    print()
-    print("Checking {}".format(yaml_filename))
+    out = "Checking {}".format(yaml_filename)
+    sys.stdout.write(out)
 
     # monkey patch
     wget.ulib.URLopener.version = (
