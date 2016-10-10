@@ -17,3 +17,4 @@ install:
 
 script:
   - grunt
+  - python test/image-checker.py packs/*.yaml
