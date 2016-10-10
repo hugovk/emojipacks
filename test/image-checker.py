@@ -31,6 +31,10 @@ def check_yaml(yaml_filename):
     errors = []
     warnings = []
 
+    print()
+    print("Checking {}...".format(yaml_filename))
+    print()
+
     # monkey patch
     wget.ulib.URLopener.version = (
         "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) "
