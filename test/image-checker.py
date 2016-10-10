@@ -75,15 +75,17 @@ def check_yaml(yaml_filename):
                     errors.append(error)
                     f.close()
 
-            # os.remove(download)
+            os.remove(download)
 
     print()
     print()
     print("Found {} errors in {}".format(len(errors), yaml_filename))
-    print("\n".join(errors))
+    if len(errors):
+        print("\n".join(errors))
     print()
     print("Found {} warnings in {}".format(len(warnings), yaml_filename))
-    print("\n".join(warnings))
+    if len(warnings):
+        print("\n".join(warnings))
     print()
     return errors, warnings
 
