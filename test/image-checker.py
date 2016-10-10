@@ -4,7 +4,7 @@
 Verify src files in YAML are images and not too big
 """
 from __future__ import print_function, unicode_literals
-from PIL import Image
+from PIL import Image  # pip install pillow
 import argparse
 import glob
 import os
@@ -32,8 +32,7 @@ def check_yaml(yaml_filename):
     warnings = []
 
     print()
-    print("Checking {}...".format(yaml_filename))
-    print()
+    print("Checking {}".format(yaml_filename))
 
     # monkey patch
     wget.ulib.URLopener.version = (
@@ -46,17 +45,16 @@ def check_yaml(yaml_filename):
         url = emoji["src"]
         if url not in urls_checked:
             urls_checked.add(url)
-            download = wget.download(url, tempfile.gettempdir(),
-                                     bar=wget.bar_thermometer)
-            print()
-            print(download)
+
+            sys.stdout.write('.')
+            download = wget.download(url, tempfile.gettempdir(), bar=None)
+
             # Square images work best. Image can't be larger than 128px in
             # width or height, and must be smaller than 64K in file size.
 
             if os.path.getsize(download) > 65536:
                 error = ("Error: must be smaller than 64K in file size: "
                          "{}").format(url)
-                print(error)
                 errors.append(error)
 
             with open(download, "rb") as f:
@@ -66,22 +64,20 @@ def check_yaml(yaml_filename):
                     if im.width > 128 or im.height > 128:
                         error = ("Error: image can't be larger than 128px in "
                                  "width or height: {} {}".format(
-                                    url, im.size))
-                        print(error)
+                                    im.size, url))
                         errors.append(error)
                     elif im.width != im.height:
                         warning = ("Warning: square images work best: "
-                                   "{} {}".format(url, im.size))
-                        print(warning)
+                                   "{} {}".format(im.size, url))
                         warnings.append(warning)
                 except IOError:
                     error = "Error: cannot open as image: {}".format(url)
-                    print(error)
                     errors.append(error)
                     f.close()
 
             # os.remove(download)
 
+    print()
     print()
     print("Found {} errors in {}".format(len(errors), yaml_filename))
     print("\n".join(errors))
