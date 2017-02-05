@@ -1,6 +1,6 @@
 # emojipacks
 
-[![Build Status](https://travis-ci.org/lambtron/emojipacks.svg?branch=master)](https://travis-ci.org/lambtron/emojipacks)
+[![Build Status](https://travis-ci.org/hugovk/emojipacks.svg?branch=master)](https://travis-ci.org/hugovk/emojipacks)
 
 > CLI to bulk upload emojis to your Slack!
 
@@ -15,7 +15,7 @@ $ npm install -g emojipacks
 or
 
 ```bash
-$ git clone git@github.com:lambtron/emojipacks.git
+$ git clone git@github.com:hugovk/emojipacks.git
 $ cd emojipacks
 $ make
 ```
@@ -104,15 +104,15 @@ emojis:
 - [starwars](http://www.emojipacks.com/packs/starwars.yaml)
 - [startups](http://www.emojipacks.com/packs/startups.yaml)
 - [businessfish](http://www.emojipacks.com/packs/businessfish.yaml)
-- [hipchat](https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/hipchat.yaml)
-- [twitch](https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/twitch.yaml)
-- [Slackmojis](https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/slackmojis.yaml)
-- [parrotparty](https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/parrotparty.yaml) ([Parrot](http://cultofthepartyparrot.com/) [Paint](http://cultofthepartyparrot.com/paint/))
-- [Finland](https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/finland.yaml)
-- [pokemongo: items](https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/pokemongo.yaml)
+- [hipchat](https://raw.githubusercontent.com/hugovk/emojipacks/master/packs/hipchat.yaml)
+- [twitch](https://raw.githubusercontent.com/hugovk/emojipacks/master/packs/twitch.yaml)
+- [Slackmojis](https://raw.githubusercontent.com/hugovk/emojipacks/master/packs/slackmojis.yaml)
+- [parrotparty](https://raw.githubusercontent.com/hugovk/emojipacks/master/packs/parrotparty.yaml) ([Parrot](http://cultofthepartyparrot.com/) [Paint](http://cultofthepartyparrot.com/paint/))
+- [Finland](https://raw.githubusercontent.com/hugovk/emojipacks/master/packs/finland.yaml)
+- [pokemongo: items](https://raw.githubusercontent.com/hugovk/emojipacks/master/packs/pokemongo.yaml)
 - [Pokémon Go: Pokémon](https://raw.githubusercontent.com/Templarian/slack-emoji-pokemon/master/pokemon.yaml) ([Prefixed `pokemon-*`](https://raw.githubusercontent.com/Templarian/slack-emoji-pokemon/master/pokemon-prefix.yaml))
-- [nekoatsume](https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/nekoatsume.yaml)
-- [octicons](https://raw.githubusercontent.com/lambtron/emojipacks/master/packs/octicons.yaml)
+- [nekoatsume](https://raw.githubusercontent.com/hugovk/emojipacks/master/packs/nekoatsume.yaml)
+- [octicons](https://raw.githubusercontent.com/hugovk/emojipacks/master/packs/octicons.yaml)
 - [pokemon](https://raw.githubusercontent.com/jaylynch/pokemoji/master/pokemon-by-name.yaml)
 - [devicon](https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/devicon.yaml) ([Devicon](http://devicon.fr/))
 
