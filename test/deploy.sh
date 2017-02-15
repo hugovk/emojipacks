@@ -5,6 +5,7 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
+  mkdir out
   python test/yaml2html.py "packs/*.yaml" > out/index.html
 }
 
