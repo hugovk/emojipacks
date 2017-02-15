@@ -20,4 +20,11 @@ install:
 script:
   - grunt
   - python test/image-checker.py --resize "packs/*.yaml"
-  - python test/yaml2html.py "packs/*.yaml" > index.html
+
+after_script:
+  - ./test/deploy.sh
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "3d9b8a537e2d"
+  - COMMIT_AUTHOR_EMAIL: "you@example.com"

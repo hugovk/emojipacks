@@ -5,7 +5,7 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
-  ./compile.sh
+  python test/yaml2html.py "packs/*.yaml" > out/index.html
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
