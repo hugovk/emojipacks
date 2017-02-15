@@ -6,6 +6,7 @@ TARGET_BRANCH="gh-pages"
 
 function doCompile {
   mkdir -p out
+  cp test/style.css out/
   python test/yaml2html.py "packs/*.yaml" > out/index.html
 }
 

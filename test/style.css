@@ -1,0 +1,28 @@
+html {
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+}
+html, body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1, h2 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 750%;
+  width: 100%;
+}
+h2 {
+  font-size: 250%;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+}
+li {
+  display: inline-block;
+}
