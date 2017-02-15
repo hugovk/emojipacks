@@ -1,0 +1,30 @@
+language: python
+
+python: 2.7
+
+# whitelist
+# gh-pages is otherwise ignored by Travis CI
+# Use a regex to whitelist gh-pages and all branches
+branches:
+  only:
+    - /.*/
+
+ # Use container-based infrastructure
+sudo: false
+
+install:
+  - npm install
+  - pip install -U pip
+  - pip install -r test/requirements.txt
+
+script:
+  - grunt
+  - python test/image-checker.py --resize "packs/*.yaml"
+
+after_script:
+  - ./test/deploy.sh
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "3d9b8a537e2d"
+  - COMMIT_AUTHOR_EMAIL: "you@example.com"
